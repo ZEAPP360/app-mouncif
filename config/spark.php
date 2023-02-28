@@ -140,8 +140,8 @@ return [
                 [
                     'name' => 'Standard',
                     'short_description' => 'This is a short, human friendly description of the plan.',
-                    'monthly_id' => 'price_id',
-                    'yearly_id' => 'price_id',
+                    'monthly_id' => 'price_1MgSa5FA3JbQrJ1vXGQZOFVX',
+                    'yearly_id' => 'price_1MgSalFA3JbQrJ1vTMU7FyQm',
                     'features' => [
                         'Feature 1',
                         'Feature 2',
