@@ -14,6 +14,8 @@
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
+        @vite(['resources/video-ui/build/static/css/main.c5be60a9.css', 'resources/video-ui/build/static/js/main.fbc9c0c0.js'])
+
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
