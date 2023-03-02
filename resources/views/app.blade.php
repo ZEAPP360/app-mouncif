@@ -9,13 +9,13 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="video-ui/static/css/main.68a38031.css" rel="stylesheet" />
 
         <!-- Scripts -->
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
-        @vite(['resources/video-ui/build/static/css/main.c5be60a9.css', 'resources/video-ui/build/static/js/main.fbc9c0c0.js'])
-
+      
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
