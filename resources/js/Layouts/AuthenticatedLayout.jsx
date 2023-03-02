@@ -1,12 +1,21 @@
 import { useState } from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import ApplicationLogo from './Components/ApplicationLogo';
+import Dropdown from './Components/Dropdown';
+import NavLink from './Components/NavLink';
+import ResponsiveNavLink from './Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+
+
+    let call_data=()=>{
+        window.location.href="/dashboard"
+    }
+
+    let call_data1=()=>{
+        window.location.href="/dashboard"
+    }
 
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -15,15 +24,16 @@ export default function Authenticated({ auth, header, children }) {
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
-                                <Link href="/">
+                                <Link onClick={()=>call_data1()}>
                                     <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                                 </Link>
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink href={route('dashboard')} active={route().current('dashboard')}>
+                                <button onClick={()=>call_data()} style={{color:"white"}}>Dashboard</button>
+                                {/* <NavLink href='/dashboard' >
                                     Dashboard
-                                </NavLink>
+                                </NavLink> */}
                             </div>
                         </div>
 
@@ -93,7 +103,7 @@ export default function Authenticated({ auth, header, children }) {
 
                 <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
+                        <ResponsiveNavLink href='dashboard' active={route().current('dashboard')}>
                             Dashboard
                         </ResponsiveNavLink>
                     </div>
