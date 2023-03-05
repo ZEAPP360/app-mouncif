@@ -18,23 +18,23 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
-    // return Inertia::render('Dashboard', [
-    //     'canLogin' => Route::has('login'),
-    //     'canRegister' => Route::has('register'),
-    //     'laravelVersion' => Application::VERSION,
-    //     'phpVersion' => PHP_VERSION,
-    // ]);
+    // return view('dashboard');
+    return Inertia::render('Dashboard', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
-// Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('home');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/home', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('home');
 // Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
+//     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/logout', [ProfileController::class, 'logout']);
 

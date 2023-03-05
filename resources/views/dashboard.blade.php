@@ -2117,9 +2117,10 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="{{route('profile.edit')}}">Profile</a></li>
+                                        <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
                                         <li><a class="dropdown-item" href="/billing">Billing</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><button class="block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out ">Log Out</button></li>
+                                        <li><a class="block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out " method="post" href={{route('logout')}} >Log Out</a></li>
                                     </ul>
                                     </li>
                                 </ul>
